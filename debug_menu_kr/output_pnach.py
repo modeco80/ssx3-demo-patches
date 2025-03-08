@@ -10,10 +10,10 @@ import pnach_utils
 
 # base addresses. If you change these in the .asm
 # UPDATE THESE.
-TRAMPOLINE_BASE = 0x3796d0
-TRAMPOLINE_ENTRY_BASE = 0x1874e8
+TRAMPOLINE_BASE = 0x0041cd58
+TRAMPOLINE_ENTRY_BASE = 0x001b75e4
 
-with open('7656425F.pnach', 'w') as pnach_file:
+with open('96848841.pnach', 'w') as pnach_file:
     # init the cheat
     pnach = pnach_utils.PnachWriter(pnach_file)
     pnach.write_cheat_header('Lily\\DebugMenu', 'modeco80', 'Enables the SSX Debug Menu. Use Circle in the pause menu to enter the debug menu.')
@@ -31,6 +31,7 @@ with open('7656425F.pnach', 'w') as pnach_file:
     with open('trampoline_entry.bin', 'rb') as tramp_file:
         for inst in pnach_utils.read_in_inst_sized_chunks(tramp_file):
             pnach.write_word(inst)
+
 
 
         

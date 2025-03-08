@@ -5,3 +5,5 @@
 attic/
 
 *.exe
+
+/**/__pycache__
