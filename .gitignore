@@ -1,0 +1,7 @@
+*.txt
+*.bin
+*.sym
+*.pnach
+attic/
+
+*.exe
