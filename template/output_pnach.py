@@ -13,7 +13,7 @@ import pnach_utils
 TRAMPOLINE_BASE = [TRAMPOLINE_ADDRESS]
 TRAMPOLINE_ENTRY_BASE = [TRAMPLINE_ENTRY_ADDRESS]
 
-with open('7656425F.pnach', 'w') as pnach_file:
+with open('7656425F.template.pnach', 'w') as pnach_file:
     # init the cheat
     pnach = pnach_utils.PnachWriter(pnach_file)
     cheat = pnach.begin_cheat('Template', 'Author', 'What this cheat does')
