@@ -16,17 +16,17 @@ trampoline:
 
 	; TODO: uber fall recovery has an autoreset, so we should also check
 	; for that and fall back for that
-	bne a2, t0, .ignore	; make sure auto reset type is not equal to 0
-	li v0, 0x0		; if it isn't then we simply ignore it
+	beq a2, t0, .detour	; make sure auto reset type is not equal to 0
+	nop			; if it is, detour back to the original game code
+				; (since it's the player resetting, not the game)
 
-				; detour back to the original game code
+	jr ra			; if this is an autoreset and the game is trying to reset
+	li v0, 0x0		; just return 0 and ignore it entirely :)
+	
+.detour:			; detour back to the original implementation
 	addiu sp, sp, -32	; setup the stack
 	j 0x00116fb0		; trampoline back
-	sq s0, 0x10(sp)		; set this up so it's good				
-
-.ignore:
-	jr ra			; if this is an autoreset and the game is trying to reset
-				; ignore it entirely :)	
+	sq s0, 0x10(sp)		; set this up so it's good
 .close
 
 
