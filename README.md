@@ -4,7 +4,13 @@ Patches for the demo builds of SSX 3. This is "source code" form of these, and t
 
 # Building
 
-You need armips and python.
+You need armips, python, and GNU make.
+
+```
+make
+```
+
+All pathces
 
 # Patch Documentation
 

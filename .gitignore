@@ -4,6 +4,9 @@
 *.pnach
 attic/
 
+# output
+!patches/*.pnach
+
 *.exe
 
 /**/__pycache__
