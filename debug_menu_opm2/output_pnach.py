@@ -13,7 +13,7 @@ import pnach_utils
 TRAMPOLINE_BASE = 0x3796d0
 TRAMPOLINE_ENTRY_BASE = 0x1874e8
 
-with open('7656425F.debug_menu.pnach', 'w') as pnach_file:
+with open('SCUS-97248_5F3A6BC0.debug_menu.pnach', 'w') as pnach_file:
     # init the cheat
     pnach = pnach_utils.PnachWriter(pnach_file)
     cheat = pnach.begin_cheat('Lily\\DebugMenu', 'modeco80', 'Enables the SSX Debug Menu. Use Circle in the pause menu to enter the debug menu.')
