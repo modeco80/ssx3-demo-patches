@@ -2,15 +2,15 @@
 
 Patches for the demo builds of SSX 3. This is "source code" form of these, and the "pnach" files are the output product.
 
+The patches are provided in the patches subdirectory/, and a template is provided to make it easy for other patches to be made.
+
 # Building
+
+If you don't trust me for some reason, you can build the patches from this repository yourself.
 
 You need armips, python, and GNU make.
 
-```
-make
-```
-
-All pathces
+Simply running `make ARMIPS=/path/to/armips` should build the patches.
 
 # Patch Documentation
 
