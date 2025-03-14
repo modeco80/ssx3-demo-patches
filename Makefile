@@ -22,4 +22,7 @@ all:
 
 clean:
 	$(call doallpatches,cleanone)
-	
+
+# copy to emulator
+copy:
+	cp -v patches/*.pnach $(PCSX2_DIR)/cheats/
