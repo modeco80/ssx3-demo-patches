@@ -3,14 +3,16 @@
 
 .ps2
 
-; TRAMPOLINE FUNCTION
+; PATCH FUNCTION
+;
 ; This is 12*4 bytes long, although in the space I've found 
 ; there's about 25*4 bytes extra space in this cave (past the ones I'm using here)
-.create "trampoline.bin",0x003796d0
+
+.create "debug_menu_patch.bin",0x003796d0
 .org 0x003796d0
-trampoline:
+patch_entry:
 	lui t0,0x0040     		; load the address of the 
-					; SSXApp global pointer into t0
+							; SSXApp global pointer into t0
 	ori t0,t0,0x009c		; ...
 	
 	move t2, zero			; preload t2
@@ -32,11 +34,11 @@ trampoline:
 .close
 
 ; TRAMPOLINE ENTRY
-.create "trampoline_entry.bin",0x001874e8
+.create "debug_menu_trampoline.bin",0x001874e8
 .org 0x001874e8
 trampoline_entry:
-	jal trampoline			; jump to trampoline
+	jal patch_entry		; jump to trampoline
 	move t1, a0			; save old a0 into t1
-					; since we'll need it if
-					; the trampoline wants to jump back
+						; since we'll need it if
+						; the trampoline wants to jump back
 .close

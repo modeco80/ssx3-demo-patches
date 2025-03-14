@@ -24,5 +24,7 @@ Enables the Debug Menu. Press Circle in the pause menu to open the debug menu. M
 
 ## No Autoreset (KR)
 
-Disables the game's "auto reset" functionality, allowing you to explore out of bounds. Slightly WIP, since there are a couple autoresets that should be allowed, but aren't at the moment.
+Disables the game's "auto reset" functionality, allowing you to explore out of bounds. 
+
+Unfortunately, certain auto resets like wipeout recovery use the same auto reset type as "bad" ones we don't want to enable. This sucks.
 

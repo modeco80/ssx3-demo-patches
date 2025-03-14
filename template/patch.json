@@ -1,0 +1,18 @@
+{
+    "patchName": "You\\Patch",
+    "patchAuthor": "You",
+    "patchDescription": "Does something cool",
+    "patchSegments": [
+        {
+            "name": "Patch Code",
+            "org": "[org]",
+            "source": "template_patch.bin"
+        },
+
+        {
+            "name": "Trampoline",
+            "org": "[org]",
+            "source": "template_trampoline.bin"
+        }
+    ]
+}

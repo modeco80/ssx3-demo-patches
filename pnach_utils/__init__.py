@@ -1,6 +1,7 @@
 import binascii
 
-def read_in_inst_sized_chunks(file):
+# Reads a file in 4 byte (EE Word) chunks
+def read_as_word_chunks(file):
     while True:
         data = file.read(4)
         if not data:
@@ -42,7 +43,7 @@ class PnachWriter:
 
 
     def write_comment(self, comment):
-       self._file.write(f'//{comment}')
+       self._file.write(f'//{comment}\n')
 
     # writes a pnach patch to write the given word into memory
     # if the provided bytestring is not large enough, it is padded with 0 bytes

@@ -6,9 +6,9 @@
 ; TRAMPOLINE FUNCTION
 ; This is 15*4 bytes long, although in the space I've found 
 ; there's about 25*4 bytes extra space in this cave (past the ones I'm using here)
-.create "trampoline.bin",0x0041cd58
+.create "debug_menu_patch.bin",0x0041cd58
 .org 0x0041cd58
-trampoline:
+entry:
 	lui t0,0x004b     		; load address of SSXApp global pointer into t0
 	ori t0,t0,0xcbc8
 	move t1, a0			; save old a0 into t1 (we will need it later)
@@ -32,9 +32,9 @@ trampoline:
 .close
 
 ; TRAMPOLINE ENTRY
-.create "trampoline_entry.bin",0x001b75e4
+.create "debug_menu_trampoline.bin",0x001b75e4
 .org 0x001b75e4
 trampoline_entry:
-	jal trampoline			; jump to trampoline
-	nop				; ...
+	jal entry			; jump to trampoline
+	nop					; ...
 .close

@@ -1,0 +1,18 @@
+{
+    "patchName": "Lily\\NoAutoReset",
+    "patchAuthor": "modeco80",
+    "patchDescription": "Disables automatic reset. Allows exploring!",
+    "patchSegments": [
+        {
+            "name": "Patch Code",
+            "org": "0x0041cac4",
+            "source": "no_autoreset_patch.bin"
+        },
+
+        {
+            "name": "Trampoline",
+            "org": "0x00116fa8",
+            "source": "no_autoreset_trampoline.bin"
+        }
+    ]
+}

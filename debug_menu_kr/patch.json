@@ -1,0 +1,18 @@
+{
+    "patchName": "Lily\\DebugMenu",
+    "patchAuthor": "modeco80",
+    "patchDescription": "Enables the SSX Debug Menu. Use Circle in the pause menu to enter the debug menu.",
+    "patchSegments": [
+        {
+            "name": "Patch Code",
+            "org": "0x0041cd58",
+            "source": "debug_menu_patch.bin"
+        },
+
+        {
+            "name": "Trampoline",
+            "org": "0x001b75e4",
+            "source": "debug_menu_trampoline.bin"
+        }
+    ]
+}

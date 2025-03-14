@@ -1,7 +1,7 @@
 [Lily\NoAutoReset]
 author=modeco80
-comment=Disable auto reset functionalirt
-// Trampoline
+comment=Disables automatic reset. Allows exploring!
+// Patch Segment "Patch Code"
 patch=1,EE,0041cac4,word,35090001
 patch=1,EE,0041cac8,word,14c80004
 patch=1,EE,0041cacc,word,34020000
@@ -10,6 +10,6 @@ patch=1,EE,0041cad4,word,08045bec
 patch=1,EE,0041cad8,word,7fb00010
 patch=1,EE,0041cadc,word,03e00008
 patch=1,EE,0041cae0,word,00000000
-// Trampoline Entry Point
+// Patch Segment "Trampoline"
 patch=1,EE,00116fa8,word,081072b1
 patch=1,EE,00116fac,word,00004021

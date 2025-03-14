@@ -18,5 +18,5 @@ trampoline:
 .org [TRAMPOLINE_ENTRY_ADDRESS]
 trampoline_entry:
 	jal trampoline			; jump to trampoline
-	nop				; ...
+	nop						; ...
 .close
