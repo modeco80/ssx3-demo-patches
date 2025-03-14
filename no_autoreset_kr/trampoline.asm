@@ -27,6 +27,7 @@ trampoline:
 .ignore:
 	jr ra			; if this is an autoreset and the game is trying to reset
 				; ignore it entirely :)	
+	nop			; branch delay slot
 .close
 
 

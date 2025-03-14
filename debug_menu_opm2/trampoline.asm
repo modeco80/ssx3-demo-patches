@@ -26,7 +26,7 @@ trampoline:
 
 .is_debug_menu_id:			; okay, this is it...
 	lw a0, 0x5c(t3)			; load cGame ptr from SSXApp
-	lw a1, 0			; first controller? not sure what this param is tbh
+	ori a1, zero, 0x0		; first controller? not sure what this param is tbh
 	j 0x001acef0			; jump to debug menu function (it will jr ra for us)
 	mtc1 zero, f12			; zero unknown float thats required?
 .close
