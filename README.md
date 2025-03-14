@@ -12,6 +12,8 @@ You need armips, python, and GNU make.
 
 Simply running `make ARMIPS=/path/to/armips` should build the patches.
 
+`make PCSX2_DIR=/path/to/your/PCSX2/dir copy` will copy the built patches into your PCSX2 cheats directory for toy.
+
 # Patch Documentation
 
 ## Debug Menu (OPM2)

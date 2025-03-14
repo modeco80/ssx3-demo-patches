@@ -1,12 +1,8 @@
-# Makefile
+# Top-level Makefile. Builds all patches
 
 TOP=$(shell pwd)
 ARMIPS=$(TOP)/armips.exe
 
-# todo: NOT this. please god not this.
-
-#	cd $1; $(ARMIPS) -sym trampoline.sym trampoline.asm; 
-#	cd $1; ./output_pnach.py; cp -v *.pnach $(TOP)/patches;
 define makeone
 	$(MAKE) -C $(1) TOP=$(TOP) ARMIPS=$(ARMIPS)
 endef
@@ -14,7 +10,6 @@ endef
 define cleanone
 	$(MAKE) -C $(1) TOP=$(TOP) ARMIPS=$(ARMIPS) clean
 endef
-
 
 define doallpatches
 	 $(call $1,debug_menu_opm2)
